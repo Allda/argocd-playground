@@ -1,0 +1,20 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sample-rest-api
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: sample-rest-api
+  template:
+    metadata:
+      labels:
+        app: sample-rest-api
+    spec:
+      containers:
+      - name: sample-rest-api
+        image: nginxdemos/hello:latest
+        ports:
+        - containerPort: 80
