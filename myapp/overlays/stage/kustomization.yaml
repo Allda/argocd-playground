@@ -9,5 +9,5 @@ resources:
 - ../../base
 
 images:
-- name: myapp
+- name: nginxdemos/hello
   newTag: 1.0.0
